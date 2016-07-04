@@ -1,5 +1,49 @@
+
+.gradientAnimate{
+    -webkit-animation: AnimationName 2s ease infinite;
+    animation: AnimationName 2s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+
 body{
     font-family: georgia;
+    padding: 4px;
+
+    background: rgba(168,167,167,1);
+    background: -moz-linear-gradient(-45deg, rgba(168,167,167,1) 0%, rgba(204,82,122,1) 23%, rgba(232,23,92,1) 49%, rgba(71,71,71,1) 76%, rgba(54,54,54,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(168,167,167,1)), color-stop(23%, rgba(204,82,122,1)), color-stop(49%, rgba(232,23,92,1)), color-stop(76%, rgba(71,71,71,1)), color-stop(100%, rgba(54,54,54,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(168,167,167,1) 0%, rgba(204,82,122,1) 23%, rgba(232,23,92,1) 49%, rgba(71,71,71,1) 76%, rgba(54,54,54,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(168,167,167,1) 0%, rgba(204,82,122,1) 23%, rgba(232,23,92,1) 49%, rgba(71,71,71,1) 76%, rgba(54,54,54,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(168,167,167,1) 0%, rgba(204,82,122,1) 23%, rgba(232,23,92,1) 49%, rgba(71,71,71,1) 76%, rgba(54,54,54,1) 100%);
+    background: linear-gradient(135deg, rgba(168,167,167,1) 0%, rgba(204,82,122,1) 23%, rgba(232,23,92,1) 49%, rgba(71,71,71,1) 76%, rgba(54,54,54,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8a7a7', endColorstr='#363636', GradientType=1 );
+
+}
+
+nav {
+    position: fixed;
+
+    width: -webkit-calc(100vw - 10px);
+    width: -moz-calc(100vw - 10px);
+    width: calc(100vw - 10px);
+
+    z-index: 999999;
+    background: white;
+    top: 4px;
+}
+
+#wrapper {
+    width: 100%;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 *{
@@ -11,16 +55,26 @@ body{
 }
 
 section{
-    width: 100vw;
+
+    width: -webkit-calc(100vw - 90px);
+    width: -moz-calc(100vw - 90px);
+    width: calc(100vw - 90px);
+
     height: 100vh;
     display: block;
     position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1#logo{
+    font-size: 28em;
 }
 
 h1#logo,article,.video-wrapper {
     width: 100%;
     text-align: center;
-    font-size: 28em;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -31,13 +85,46 @@ video#video {
     float: left;
 }
 
-article {
-    font-size: 2em;
+#about article {
+    font-size: 3vw;
 }
 
-article p{
-    max-width: 700px;
+#about article p{
+    /* max-width: 850px; */
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
+
+
+#features span {
+    max-width: 700px;
+    width: 50%;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 3em;
+    text-align: left;
+}
+
+#features article {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+span#customisable,#open {
+    margin-left: 32%;
+}
+
+a.link {
+    text-decoration: none;
+    font-style: none;
+    margin-right: 10px;
+}
+
+a.link[href="#download"] {
+    float: right;
+}
+
+
+

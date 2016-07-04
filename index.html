@@ -8,40 +8,148 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <title>Re-</title>
-  <body>
+  <body class="gradientAnimate">
 
-  <nav>
-    <a class="link" href="#about">about</a>
-    <a class="link" href="#intro">intro</a>
-    <a class="link" href="#download">download</a>
-  </nav>
+  <div id="wrapper">
 
-    <section id="logo-wrapper"><h1 id="logo">Re-</h1></section>
+    <nav>
+      <a class="link" href="#re-">Re-</a>
+      <a class="link" href="#intro">intro</a>
+      <a class="link" href="#about">about</a>
+      <a class="link" href="#features">features</a>
+      <a class="link" href="#views">views gallery</a>
+      <a class="link" href="#modules">modules gallery</a>
+      <a class="link" href="#documents">documents</a>
+      <a class="link" href="#download">download</a>
+    </nav>
+
+    <section id="re-">
+      <h1 id="logo">Re-</h1>
+    </section>
 
     <section id="intro">
+      <div class="video-wrapper">
 
-    <div class="video-wrapper">
 
-        <video id="video" loop autoplay>
-            <source src="files/re-left.webm"></source>
-        </video>
 
-        <video id="video" loop autoplay>
-            <source src="files/re-right.webm"></source>
-        </video>
-    </div>
+
+          <video id="video" loop autoplay>
+            <source src="files/re-left.webm" type='video/webm; codecs="vp8.0, vorbis"'>
+            <source src="files/re-left.ogg" type='video/ogg; codecs="theora, vorbis"'>
+            <source src="files/re-left.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+          </video>
+
+          <video id="video" loop autoplay>
+            <source src="files/re-right.webm" type='video/webm; codecs="vp8.0, vorbis"'>
+            <source src="files/re-right.ogg" type='video/ogg; codecs="theora, vorbis"'>
+            <source src="files/re-right.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+          </video>
+      </div>
     </section>
 
     <section id="about">
       <article>
-      <p>
-Designers today face a new paradigm in which readers have become users, more cohesively utilizing digital means of mass communication and information exchange. As a graphic designer I find the utilization of web browsers as the most effective and relevant means in which we can work within this phenomenon.
-Re- as a modular platform gives the user more power over design and content structure, which in turn works by cutting out unnecessary noise from a webpage. It functions as a more focused work tool which is exponentially efficient and reliable in terms of reading experience and information consumption on the web. Re- shifts the user’s experience of reading information and browsing the web; users decide which information they want to see, by completely customising their browsing experience.
-  </p>
+        <p>
+        Designers today face a new paradigm in which readers have become users, more cohesively utilizing digital means of mass communication and information exchange. As a graphic designer I find the utilization of web browsers as the most effective and relevant means in which we can work within this phenomenon.
+        Re- as a modular platform gives the user more power over design and content structure, which in turn works by cutting out unnecessary noise from a webpage. It functions as a more focused work tool which is exponentially efficient and reliable in terms of reading experience and information consumption on the web. Re- shifts the user’s experience of reading information and browsing the web; users decide which information they want to see, by completely customising their browsing experience.
+        </p>
+      </article>
+    </section>
+      
+    <section id="features">
+      <article>
+
+        <span id="modular">
+          <h2>Modular-content</h2>
+          Users can create/develop their own content modules. Re- has four modules by default: 'text', 'image', 'hyperlinks' and 'metadata' modules which user can add/active one or more of them.
+        </span>
+        
+        <span id="customisable">
+          <h2>Customisable-content</h2>
+          The idea of the modular-content gives you the possibilities of redesigning/reframing the content of a web page with css/html, javascript. Hence this is user who can decide how for example google looks on their browser.
+        </span>
+
+        <span id="faster">
+          <h2>Faster</h2>
+          Since Re- does not take the webpages for grant and does not render javascript and css resources of a webpage, it is much faster compair to other conventional browsers.
+        </span>
+        <span id="open">
+          <h2>Open-source</h2>
+          Re- is an open source project. you can clone the entire project repo on Github and of course any contribution will be welcome.
+        </span>
+
       </article>
     </section>
 
 
+    <section id="views">
+        <strong>Views gallery</strong>
+        <br/>
+        <small><i>comming soon ...!</i></small>
+    </section>
+      
+
+    <section id="modules">
+        <strong>modules gallery</strong>
+        <br/>
+        <small><i>comming soon ...!</i></small>
+    </section>
+
+    <section id="download">
+        <strong>download</strong>
+        <br/>
+        <small><i>comming soon ...!</i></small>
+    </section>
+
+
+  </div>
+
+
+  <script type="text/javascript">
+
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length; i; i -= 1) {
+            j = Math.floor(Math.random() * i);
+            x = a[i - 1];
+            a[i - 1] = a[j];
+            a[j] = x;
+        }
+    }
+
+    window.onload = ()=>{
+
+      var body = document.body;
+      var index = 0;
+
+      var fontList = [
+      'Arial,"Helvetica Neue",Helvetica,sans-serif',
+      'Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif',
+      '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+      'Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif',
+      'Cambria,Georgia,serif',
+      '"Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace',
+      'monaco,Consolas,"Lucida Console",monospace',
+      '"Lucida Console","Lucida Sans Typewriter",monaco,"Bitstream Vera Sans Mono",onospac',
+      '"Andale Mono",AndaleMono,monospace','Consolas,monaco,monospace',
+      '"Rockwell Extra Bold","Rockwell Bold",monospace',
+      '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif',
+      'Tahoma,Verdana,Segoe,sans-serif',
+      '"Gill Sans","Gill Sans MT",Calibri,sans-serif',
+      '"Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif',
+      'Futura,"Trebuchet MS",Arial,sans-serif'];
+
+      shuffle(fontList);
+
+
+      var timer = setInterval(()=>{
+          var font = fontList[index];
+          body.style.fontFamily = font;
+          index = fontList[index+1]? index+1: 0;
+      }, 30000);
+
+    }
+  </script>
 
   </body>
 
